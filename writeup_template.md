@@ -9,7 +9,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
 [image2]: ./examples/region_interest.png "Region of interest for lane finding"
-
+[image3]: ./examples/Hough_transform.png "Hough Transform"
 
 ---
 
@@ -17,7 +17,6 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function as follows.
 First, I converted the images to grayscale, then applied gaussian blur to further smoothen the edges. This smoothed image was run using canny method using minmum and maximum threshold values discussed in the quiz.
 
 Once the canny edges are detected, vertices of the polygon are choosen in such a way that the lanes fit inside the polygon. Using fillpoly function the detected points for the lines are represented as masked edges.
@@ -25,6 +24,14 @@ Once the canny edges are detected, vertices of the polygon are choosen in such a
 ![alt text][image2]
 
 The masked edges are then used to generate hough lines. Which return a list of lists of x, y co-ordinate pair for the hough lines.
+![alt text][image3]
+
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function as follows.
+1) Calculate the slopes of all the hough lines and since we already know that these lines are part of the lane lines. Separate these lines based on the slopes
+2) Slope for left is negative since the Y-aixs is inverted for our image axis. Similarly right lane has positive slope
+3) Then accummulate all the x and y co-ordinates separately for left and right lanes
+4) Once we have this, the points can be extrapolated to a line formed by these points using polyfit method of degree 1(since we are looking for a line)
+
 
 Important observations made:
 - After going the entrire test images and test videos. I figured out that threshold is the most important parameter for hough function, as too small a value would result in wrong slope for the extrapolated line.
