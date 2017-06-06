@@ -8,7 +8,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
-[image2]: ./examples/region_interest.jpg "Region of interest for lane finding"
+[image2]: ./examples/region_interest.png "Region of interest for lane finding"
 
 
 ---
