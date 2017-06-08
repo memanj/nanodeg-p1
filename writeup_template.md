@@ -22,7 +22,6 @@ First, I converted the images to grayscale, then applied gaussian blur to furthe
 Once the canny edges are detected, vertices of the polygon are choosen in such a way that the lanes fit inside the polygon. Using fillpoly function the detected points for the lines are represented as masked edges(in red).
 
 ![alt text][image2]
-![alt text][image2]
 
 The masked edges are then used to generate hough lines. Which return a list of lists of x, y co-ordinate pair for the hough lines.
 ![alt text][image3]
