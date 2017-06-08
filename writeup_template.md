@@ -10,6 +10,7 @@ The goals / steps of this project are the following:
 [image1]: ./examples/grayscale.jpg "Grayscale"
 [image2]: ./examples/region_interest.jpg "Region of interest for lane finding"
 [image3]: ./examples/hough_transform.png "Hough Transform"
+[image4]: ./examples/error_detection.png "Error in lane detection"
 
 ---
 
@@ -21,7 +22,6 @@ First, I converted the images to grayscale, then applied gaussian blur to furthe
 
 Once the canny edges are detected, vertices of the polygon are choosen in such a way that the lanes fit inside the polygon. Using fillpoly function the detected points for the lines are represented as masked edges(in red).
 
-![alt text][image2]
 ![alt text][image2]
 
 The masked edges are then used to generate hough lines. Which return a list of lists of x, y co-ordinate pair for the hough lines.
@@ -43,13 +43,15 @@ Important observations made:
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
+Below are some of the issues with this logic:
+1) Co-ordinates for the polygon are fixed, in real time the lanes are changing dynamically every moment
+2) Lanes cannot always be straight lines
+3) In the example videos there are no vehicles in the lane considered, which very unlikely
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+Below are some of the improvements I think of in the pipeline
+1) Parameters for Hough lines can be adapted dynamically using some sort of feeback loop 
+2) One of the bug I found was the lane detection doesn't work for the entire duration of the video. Still working on fixing this issue.
+![alt text][image4]
