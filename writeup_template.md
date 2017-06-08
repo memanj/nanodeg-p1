@@ -42,16 +42,15 @@ Important observations made:
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-
 Below are some of the issues with this logic:
-1) Co-ordinates for the polygon are fixed, in real time the lanes are changing dynamically every moment
-2) Lanes cannot always be straight lines
-3) In the example videos there are no vehicles in the lane considered, which very unlikely
-
+1) Co-ordinates for the polygon are fixed, in real time the lanes are changing dynamically every moment.
+2) Lanes cannot always be straight lines.
+3) In the example videos there are no vehicles in the lane considered, which is very unlikely.
+4) Lane changes are not considered.
 
 ### 3. Suggest possible improvements to your pipeline
 
-Below are some of the improvements I think of in the pipeline
-1) Parameters for Hough lines can be adapted dynamically using some sort of feeback loop 
+Below are some of the improvements I think of in the pipeline.
+1) Parameters for Hough lines can be adapted dynamically using some sort of feeback loop.
 2) One of the bug I found was the lane detection doesn't work for the entire duration of the video. Still working on fixing this issue.
 ![alt text][image4]
