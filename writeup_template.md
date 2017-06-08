@@ -8,7 +8,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
-[image2]: ./examples/region_interest.png "Region of interest for lane finding"
+[image2]: ./examples/region_interest.jpg "Region of interest for lane finding"
 [image3]: ./examples/Hough_transform.png "Hough Transform"
 
 ---
@@ -17,9 +17,9 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-First, I converted the images to grayscale, then applied gaussian blur to further smoothen the edges. This smoothed image was run using canny method using minmum and maximum threshold values discussed in the quiz.
+First, I converted the images to grayscale, then applied gaussian blur to further smoothen the edges. This smoothed image was run through canny edge detection using minmum and maximum threshold values discussed in the quiz.
 
-Once the canny edges are detected, vertices of the polygon are choosen in such a way that the lanes fit inside the polygon. Using fillpoly function the detected points for the lines are represented as masked edges.
+Once the canny edges are detected, vertices of the polygon are choosen in such a way that the lanes fit inside the polygon. Using fillpoly function the detected points for the lines are represented as masked edges(in red).
 
 ![alt text][image2]
 
