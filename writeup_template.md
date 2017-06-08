@@ -9,7 +9,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
 [image2]: ./examples/region_interest.jpg "Region of interest for lane finding"
-[image3]: ./examples/Hough_transform.png "Hough Transform"
+[image3]: ./examples/hough_transform.png "Hough Transform"
 
 ---
 
