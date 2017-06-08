@@ -11,6 +11,8 @@ The goals / steps of this project are the following:
 [image2]: ./examples/region_interest.png "Region of interest for lane finding"
 [image3]: ./examples/hough_transform.jpg "Hough Transform"
 [image4]: ./examples/error_detection.png "Error in lane detection"
+[image5]: ./test_videos_ouput/solidWhiteRight.mp4 "Error in lane detection"
+[image6]: ./test_videos_ouput/solidYellowLeft.mp4 "Error in lane detection"
 
 ---
 
@@ -54,3 +56,10 @@ Below are some of the improvements I think of in the pipeline.
 1) Parameters for Hough lines can be adapted dynamically using some sort of feeback loop.
 2) One of the bug I found was the lane detection doesn't work for the entire duration of the video. Still working on fixing this issue.
 ![alt text][image4]
+
+### 4. Output video files
+
+
+![alt text][image5]
+
+![alt text][image6]
